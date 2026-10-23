@@ -2,6 +2,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 public class CalculatorTest {
 
@@ -103,5 +104,36 @@ public class CalculatorTest {
         boolean actual = calculator.isEven(2);
 
         assertTrue(actual);
+    }
+
+    @Test
+    public void testIsOdd() {
+        assertFalse(calculator.isEven(3));
+    }
+
+    @Test
+    public void testIsEvenWithZero() {
+        assertTrue(calculator.isEven(0));
+    }
+
+    @Test
+    public void testIsEvenWithNegativeNumber() {
+        assertTrue(calculator.isEven(-4));
+    }
+
+    @Test
+    public void testDivideWithNegativeNumber() {
+        int expected = -3;
+        int actual = calculator.divide(-7, 2);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testDivideWithZeroNumerator() {
+        int expected = 0;
+        int actual = calculator.divide(0, 5);
+
+        assertEquals(expected, actual);
     }
 }
