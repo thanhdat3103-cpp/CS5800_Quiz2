@@ -72,4 +72,12 @@ public class DateCheckerTest {
                 () -> dateChecker.has31Days(null)
         );
     }
+
+    @Test
+    public void testFebruaryDoesNotHave31Days() {
+        assertFalse(
+                dateChecker.has31Days(DateChecker.Month.FEBRUARY),
+                "February has 28 or 29 days, never 31"
+        );
+    }
 }
