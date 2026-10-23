@@ -1,4 +1,3 @@
-
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -35,6 +34,22 @@ public class CalculatorTest {
     public void testSubtract() {
         int expected = -1;
         int actual = calculator.subtract(1, 2);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtractWithPositiveResult() {
+        int expected = 7;
+        int actual = calculator.subtract(10, 3);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testSubtractWithNegativeNumbers() {
+        int expected = 2;
+        int actual = calculator.subtract(-3, -5);
 
         assertEquals(expected, actual);
     }
