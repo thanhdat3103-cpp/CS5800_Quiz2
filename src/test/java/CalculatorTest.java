@@ -1,6 +1,7 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class CalculatorTest {
 
@@ -95,5 +96,12 @@ public class CalculatorTest {
         );
 
         assertEquals("Cannot divide by zero", exception.getMessage());
+    }
+
+    @Test
+    public void testIsEven() {
+        boolean actual = calculator.isEven(2);
+
+        assertTrue(actual);
     }
 }
