@@ -61,4 +61,20 @@ public class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testMultiplyWithNegativeNumber() {
+        int expected = -12;
+        int actual = calculator.multiply(-3, 4);
+
+        assertEquals(expected, actual);
+    }
+
+    @Test
+    public void testMultiplyWithZero() {
+        int expected = 0;
+        int actual = calculator.multiply(8, 0);
+
+        assertEquals(expected, actual);
+    }
 }
