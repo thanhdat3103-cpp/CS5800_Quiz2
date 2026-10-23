@@ -77,4 +77,12 @@ public class CalculatorTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    public void testDivide() {
+        int expected = 3;
+        int actual = calculator.divide(7, 2);
+
+        assertEquals(expected, actual);
+    }
 }
